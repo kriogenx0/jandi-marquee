@@ -1,0 +1,176 @@
+﻿.it-marquee
+{
+	position: absolute;
+	overflow: visible;
+	cursor: url(openhand.cur), move;
+	background: transparent url(img/empty.gif); /* IE EVENTS */
+}
+.it-marquee-guts
+{
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	/*position: relative;*/
+	right: 0;
+	overflow: visible;
+}
+.it-marquee.marquee-moving,
+.it-marquee.it-resizing
+{
+	cursor: url(img/closedhand.cur), move;
+}
+.marquee-borders
+{
+	position: absolute;
+}
+.marquee-bordertop,
+.marquee-borderbottom
+{
+	background: transparent url(img/borderHorizontal.gif) top;
+	height: 2px;
+	left: 0;
+	right: 0;
+}
+.marquee-bordertop
+{
+	top: 0;
+}
+.marquee-borderbottom
+{
+	bottom: 0;
+}
+.marquee-borderleft,
+.marquee-borderright
+{
+	background: transparent url(img/borderVertical.gif) left;
+	width: 2px;
+	top: 0;
+	bottom: 0;
+}
+.marquee-borderleft
+{
+	left: 0;
+}
+.marquee-borderright
+{
+	right: 0;
+}
+.marquee-over .marquee-bordertop,
+.marquee-over .marquee-borderbottom
+{
+	background-image: url(img/borderHorizontal_focus.gif);
+}
+.marquee-over .marquee-borderleft,
+.marquee-over .marquee-borderright
+{
+	background-image: url(img/borderVertical_focus.gif);
+}
+.marquee-controls
+{
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	padding: 1px;
+	border: 1px solid #000;
+	background: #fff;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	z-index: 1000;
+	font-size: 1px;
+}
+.marquee-control-nw,
+.marquee-control-n,
+.marquee-control-ne
+{
+	top: -5px;
+}
+.marquee-control-ne,
+.marquee-control-e,
+.marquee-control-se
+{
+	right: -5px;
+}
+.marquee-control-sw,
+.marquee-control-s,
+.marquee-control-se
+{
+	bottom: -5px;
+}
+.marquee-control-nw,
+.marquee-control-w,
+.marquee-control-sw
+{
+	left: -5px;
+}
+.marquee-control-n,
+.marquee-control-s
+{
+	left: 50%;
+	right: 50%;
+	margin-left: -4px;
+}
+.marquee-control-w,
+.marquee-control-e
+{
+	top: 50%;
+	bottom: 50%;
+	margin-top: -4px;
+}
+.marquee-moving .marquee-controls
+{
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+	display: none;
+}
+.it-resizer,
+.marquee-resizer
+{
+	/*display: none;*/
+	position: absolute;
+	z-index: 10000;
+	background: transparent url(img/empty.gif); /* IE EVENTS */
+}
+.marquee-over .it-resizer,
+.marquee-over .marquee-resizer
+{
+/*display: block;*/
+}
+.marquee-mover-mask
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+}
+.it-marquee.marquee-deselected
+{
+	cursor: pointer;
+	
+}
+.marquee-deselected .marquee-borders,
+.marquee-deselected .marquee-controls,
+.marquee-deselected .marquee-resizer
+{
+	display: none;
+}
+.marquee-deselected.marquee-over .marquee-borders
+{
+	display: block;	
+}
+.marquee-deselected.marquee-over .marquee-bordertop,
+.marquee-deselected.marquee-over .marquee-borderbottom
+{
+	background-image: url(img/borderHorizontal.gif);
+	height: 1px;
+}
+.marquee-deselected.marquee-over .marquee-borderleft,
+.marquee-deselected.marquee-over .marquee-borderright
+{
+	background-image: url(img/borderVertical.gif);
+	width: 1px;
+}
+.marquee-deselected .marquee-mover-mask
+{
+	z-index: 4; /* FURTHER BACK */
+}

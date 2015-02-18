@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="example/scripts/jquery.js"></script>
+
+<script type="text/javascript" src="marquee/marquee.js"></script>
+<link type="text/css" href="marquee/marquee.css" rel="stylesheet" />
+
+
+<style type="text/css">
+
+#boxTest
+{
+	width: 400px;
+	height: 200px;
+	background: #eee;
+	position: absolute;
+	display: none;
+}
+
+.container
+{
+	position: relative;
+	background: #aaa;
+	width: 800px;
+	height: 600px;
+}
+
+.it-pointer
+{
+	background: #090;
+	z-index: 20000;
+}
+
+</style>
+
+<script type="text/javascript">
+var m1,m2;
+jQuery(function() {
+
+	m1 = new ImageToolsMarquee($("#marq"), 1);
+	
+	m2 = new ImageToolsMarquee($("#marq"), 6);
+				
+				
+});
+
+</script>
+</head>
+
+<body>
+
+<div class="container">
+
+	<img id="marq" src="example/img/background.gif" />
+	<div iad="marq" style="background: url(images/2799.gif) no-repeat; width: 1400; height: 1000" />
+</div>
+
+</body>
+</html>
